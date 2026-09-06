@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Manual de procedimientos · Decathlon</title>
+<meta name="description" content="Recepción de mercadería, cambios y averías, e inventarios cíclicos.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%233643BA'/><text y='.9em' x='50' text-anchor='middle' font-size='62'>📘</text></svg>">
+<style>
+  *{box-sizing:border-box}
+  body{margin:0;background:#eef1fa;color:#12151c;
+    font-family:system-ui,-apple-system,"Segoe UI",sans-serif;padding:0 16px 40px}
+  .pag{max-width:1100px;margin:0 auto}
+  .barra{display:flex;align-items:center;gap:14px;flex-wrap:wrap;padding:16px 0 4px}
+  .barra img{height:22px}
+  .barra .sep{flex:1}
+  .barra a{font-size:13px;font-weight:700;text-decoration:none;color:#3643BA;
+    padding:8px 16px;border-radius:99px;border:1.5px solid rgba(54,67,186,.25);transition:.15s}
+  .barra a:hover{background:#3643BA;border-color:#3643BA;color:#fff}
+  .barra a.on{background:#3643BA;border-color:#3643BA;color:#fff}
+  .cierre{text-align:center;font-size:12px;color:#5b6076;padding:22px 0 0}
+</style>
+</head>
+<body>
+<div class="pag">
+  <nav class="barra">
+    <img alt="Decathlon" src="data:image/png;base64,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">
+    <span class="sep"></span>
+    <a href="index.html">Inicio</a>
+    <a href="manual.html" class="on">Manual</a>
+    <a href="evaluacion.html">Evaluación</a>
+  </nav>
+
+<!-- ═══════════════════════════════════════════════════════════════════════
+     MANUAL DE PROCEDIMIENTOS DECATHLON
+     Los 3 manuales de repaso, lectura vertical. Pegar dentro del <body>.
+     Prefijos mp- para no pisar los estilos de la página.
+     ═══════════════════════════════════════════════════════════════════ -->
+
+<style>
+.mp-wrap{--mp-azul:#3643BA;--mp-azul-o:#2B3596;--mp-verde:#A2EBBD;--mp-verde-cl:#E9F8EF;
+  --mp-lila:#AAB4EC;--mp-lila-cl:#D7DDF7;--mp-gris:#5B6076;--mp-gris-cl:#A0A5BC;
+  --mp-linea:rgba(255,255,255,.16);--mp-panel:rgba(255,255,255,.08);
+  font-family:system-ui,-apple-system,"Segoe UI",sans-serif;color:#fff;
+  margin:34px 0;line-height:1.5}
+.mp-wrap *{box-sizing:border-box}
+.mp-wrap h2,.mp-wrap h3,.mp-wrap h4,.mp-wrap p,.mp-wrap ol,.mp-wrap ul{margin:0}
+
+.mp-top{display:flex;align-items:flex-start;gap:18px;flex-wrap:wrap;margin-bottom:16px}
+.mp-top .mp-txt{flex:1;min-width:260px}
+.mp-top h2{font-size:21px;font-weight:800;color:#fff;letter-spacing:-.01em;margin-bottom:5px}
+.mp-top p{font-size:13.5px;color:var(--mp-lila-cl);max-width:72ch}
+.mp-logo{height:26px;width:auto;display:block;opacity:.95;flex:none;margin-top:2px}
+.mp-logo-pie{height:19px;width:auto;opacity:.75}
+
+.mp-tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px}
+.mp-tabs button{font:inherit;font-size:13px;font-weight:700;cursor:pointer;padding:9px 16px;
+  border-radius:99px;border:1.5px solid var(--mp-linea);background:transparent;color:var(--mp-lila-cl);
+  display:flex;align-items:center;gap:8px;transition:.15s}
+.mp-tabs button:hover{border-color:var(--mp-verde);color:#fff}
+.mp-tabs button.on{background:var(--mp-verde);border-color:var(--mp-verde);color:var(--mp-azul-o)}
+
+.mp-visor{border:1px solid var(--mp-linea);border-radius:18px;overflow:hidden;
+  background:var(--mp-azul);position:relative;box-shadow:0 10px 30px rgba(43,53,150,.22)}
+.mp-visor::before{content:"";position:absolute;right:-120px;top:-160px;width:420px;height:420px;
+  border-radius:50%;background:var(--mp-azul-o);opacity:.55;pointer-events:none}
+
+
+.mp-sec{padding:26px 34px 28px;position:relative;z-index:2;scroll-margin-top:16px}
+.mp-sec + .mp-sec{border-top:1px solid var(--mp-linea)}
+.mp-num{position:absolute;right:30px;top:26px;font-size:12px;font-weight:800;
+  color:rgba(255,255,255,.28);font-variant-numeric:tabular-nums}
+.mp-kick{font-size:10.5px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--mp-verde);margin-bottom:7px}
+.mp-h{font-size:28px;font-weight:800;color:#fff;letter-spacing:-.02em;line-height:1.15;
+  margin-bottom:6px}
+.mp-h em{font-style:normal;color:var(--mp-verde)}
+.mp-sub{font-size:14px;color:var(--mp-lila-cl);max-width:74ch;margin-bottom:20px}
+.mp-sec.mp-hero{padding:44px 34px 40px;background:var(--mp-azul-o)}
+.mp-hero .mp-h{font-size:38px;margin-bottom:10px}
+.mp-hero .mp-num{display:none}
+
+.mp-chips{display:flex;gap:8px;flex-wrap:wrap;margin-top:6px}
+.mp-chip{font-size:12px;font-weight:700;padding:6px 14px;border-radius:99px;
+  background:rgba(162,235,189,.16);border:1px solid rgba(162,235,189,.4);color:var(--mp-verde)}
+
+.mp-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:12px}
+.mp-card{border:1px solid var(--mp-linea);border-radius:12px;padding:15px 17px;background:var(--mp-panel)}
+.mp-card .mp-ic{font-size:20px;line-height:1;display:block;margin-bottom:8px}
+.mp-card b{display:block;font-size:14px;color:var(--mp-verde);margin-bottom:4px}
+.mp-card span{font-size:13px;color:var(--mp-lila-cl)}
+
+.mp-flow{display:flex;gap:10px;flex-wrap:wrap;align-items:stretch}
+.mp-fl{flex:1;min-width:150px;position:relative;border:1px solid var(--mp-linea);border-radius:12px;
+  padding:15px 16px;background:var(--mp-panel)}
+.mp-fl em{display:block;font-style:normal;font-size:11px;font-weight:800;color:var(--mp-verde);
+  letter-spacing:.08em;margin-bottom:6px}
+.mp-fl b{display:block;font-size:14px;color:#fff;margin-bottom:4px}
+.mp-fl span{font-size:12.5px;color:var(--mp-lila-cl)}
+.mp-fl:not(:last-child)::after{content:"›";position:absolute;right:-9px;top:50%;
+  transform:translateY(-50%);font-size:19px;color:var(--mp-verde);font-weight:700;z-index:3}
+
+.mp-steps{list-style:none;counter-reset:mps}
+.mp-steps li{counter-increment:mps;position:relative;padding:11px 0 11px 46px;font-size:13.5px;
+  color:var(--mp-lila-cl);border-bottom:1px solid var(--mp-linea)}
+.mp-steps li:last-child{border-bottom:none}
+.mp-steps li b{color:#fff}
+.mp-steps li::before{content:counter(mps,decimal-leading-zero);position:absolute;left:0;top:11px;
+  width:30px;height:23px;font-size:11px;font-weight:800;color:var(--mp-azul-o);
+  background:var(--mp-verde);border-radius:7px;display:flex;align-items:center;justify-content:center}
+
+.mp-stats{display:flex;gap:14px;flex-wrap:wrap}
+.mp-stat{flex:1;min-width:190px;border:1px solid var(--mp-linea);border-radius:14px;padding:20px 22px;
+  background:var(--mp-panel)}
+.mp-stat em{display:block;font-style:normal;font-size:10.5px;font-weight:800;letter-spacing:.13em;
+  text-transform:uppercase;color:var(--mp-verde)}
+.mp-stat strong{display:block;font-size:46px;font-weight:800;color:var(--mp-verde);line-height:1.05;
+  margin:4px 0 3px;letter-spacing:-.03em}
+.mp-stat span{font-size:13px;color:var(--mp-lila-cl)}
+
+.mp-rule{margin-top:18px;padding:12px 16px;background:rgba(162,235,189,.13);
+  border-left:3px solid var(--mp-verde);border-radius:0 9px 9px 0;font-size:13px;
+  color:var(--mp-verde);font-weight:600}
+
+.mp-fin{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:16px 34px;
+  border-top:1px solid var(--mp-linea);background:var(--mp-azul-o);position:relative;z-index:2;
+  font-size:12.5px;color:var(--mp-lila-cl);font-weight:600}
+.mp-fin a{color:var(--mp-verde);text-decoration:none;font-weight:700;border:1px solid var(--mp-verde);
+  padding:6px 14px;border-radius:99px;transition:.15s}
+.mp-fin a:hover{background:var(--mp-verde);color:var(--mp-azul-o)}
+
+.mp-hero-logo{position:absolute;right:34px;top:36px;height:22px;opacity:.7}
+.mp-pie{display:flex;align-items:center;justify-content:space-between;gap:14px;margin-top:12px;
+  font-size:11.5px;color:var(--mp-lila-cl)}
+.mp-corte{margin:26px 0 0;padding:24px 26px;border-radius:18px;background:var(--mp-azul-o);
+  border:1px solid var(--mp-linea);display:flex;align-items:center;gap:20px;flex-wrap:wrap}
+.mp-corte .mp-paso{flex:none;width:52px;height:52px;border-radius:50%;background:var(--mp-verde);
+  color:var(--mp-azul-o);display:flex;align-items:center;justify-content:center;
+  font-size:19px;font-weight:800}
+.mp-corte .mp-t{flex:1;min-width:240px}
+.mp-corte h3{font-size:20px;font-weight:800;color:#fff;letter-spacing:-.01em;margin-bottom:4px}
+.mp-corte h3 em{font-style:normal;color:var(--mp-verde)}
+.mp-corte p{font-size:13px;color:var(--mp-lila-cl);max-width:64ch}
+.mp-corte .mp-flecha{flex:none;font-size:26px;color:var(--mp-verde);line-height:1}
+@media(max-width:640px){
+  .mp-corte{padding:18px;gap:14px}
+  .mp-corte .mp-paso{width:42px;height:42px;font-size:16px}
+  .mp-corte .mp-flecha{display:none}
+  .mp-sec{padding:20px 18px 22px}
+  .mp-sec.mp-hero{padding:30px 18px 28px}
+  .mp-hero-logo,.mp-num{display:none}
+  .mp-hero .mp-h{font-size:27px}.mp-h{font-size:21px}
+  .mp-fl:not(:last-child)::after{display:none}
+  .mp-fin{padding:14px 18px;flex-wrap:wrap}
+}
+
+</style>
+
+<div class="mp-wrap" id="mp-wrap" style="background:#3643BA;border-radius:20px;padding:26px 26px 22px">
+  <div class="mp-top">
+    <img class="mp-logo" alt="Decathlon" src="data:image/png;base64,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">
+    <div class="mp-txt">
+      <h2>Antes de evaluar: material de repaso</h2>
+      <p>Los tres manuales que entran en la evaluación. Elegí uno arriba y leelo de corrido.
+         Cuando termines los tres, seguí con la evaluación.</p>
+    </div>
+  </div>
+
+  <div class="mp-tabs" id="mp-tabs"></div>
+
+  <div class="mp-visor">
+    <div id="mp-cuerpo"></div>
+    <div class="mp-fin">
+      <span id="mp-fin-txt"></span>
+      <a href="#mp-wrap">↑ Volver arriba</a>
+    </div>
+  </div>
+
+  <div class="mp-corte">
+    <div class="mp-paso">2</div>
+    <div class="mp-t">
+      <h3>Ya leíste el material. <em>Ahora sí, a evaluar.</em></h3>
+      <p>Las evaluaciones están acá abajo. Respondelas sin volver a los manuales: la idea es ver
+         qué te quedó del repaso.</p>
+    </div>
+    <div class="mp-flecha">↓</div>
+  </div>
+
+  <div class="mp-pie">
+    <span>Documento de uso interno · Tienda</span>
+    <img class="mp-logo-pie" alt="Decathlon" src="data:image/png;base64,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">
+  </div>
+</div>
+
+
+<script>
+(function () {
+  const MP = {
+    recepcion: {
+      icono: "📦", nombre: "Recepción de mercadería",
+      slides: [
+        { hero: 1, kick: "Manual de procedimientos", h: "Recepción de mercadería",
+          sub: "Del camión al salón en 8 pasos · seguridad, control y agilidad",
+          chips: ["Ingreso", "Descarga", "Registro", "Implantación"] },
+
+        { kick: "Marco general", h: "Objetivo y alcance", cards: [
+          { ic: "🎯", b: "Objetivo", s: "Estandarizar la recepción de mercadería garantizando seguridad, control de calidad y eficiencia en la operación." },
+          { ic: "🏬", b: "Alcance", s: "Todo el personal que recibe, controla, registra y distribuye mercadería que llega de los centros logísticos." } ] },
+
+        { kick: "Los 3 pilares", h: "Seguridad, control y agilidad", flow: [
+          { e: "01", b: "Seguridad", s: "EPP siempre" },
+          { e: "02", b: "Control", s: "Registro preciso" },
+          { e: "03", b: "Agilidad", s: "Salón implantado" } ] },
+
+        { kick: "Roles", h: "Quién hace qué", cards: [
+          { ic: "🧭", b: "Permanente / RUs", s: "Control de remitos, verificación de precintos y supervisión general." },
+          { ic: "🛒", b: "Asesores de venta", s: "Descarga de pallets, manipulación de bins, registro e implantación." },
+          { ic: "🚚", b: "Área de logística", s: "Validación de sobrantes y autorización de ingresos en SAP." } ] },
+
+        { kick: "Pasos 1 y 2", h: "Ingreso del camión y descarga", steps: [
+          "<b>Ingreso del camión.</b> Entra al predio y entrega los remitos al responsable de turno. Se verifica el precinto <b>cerrado</b> antes de iniciar la descarga.",
+          "<b>Descarga de pallets.</b> Validado el precinto, se bajan con la pala eléctrica y se trasladan con las paleteras de la tienda para distribuir los bins." ],
+          rule: "Los pallets del camión los descarga el camionero. Sin excepción." },
+
+        { kick: "Paso 3", h: "Seguridad personal", sub: "Antes de acercarse al camión, el personal debe colocarse el equipo de protección.",
+          cards: [
+          { ic: "🥾", b: "Zapatos de seguridad", s: "Obligatorios para acercarse al camión." },
+          { ic: "🧤", b: "Guantes de trabajo", s: "Obligatorios para manipular bins y cargas." } ],
+          rule: "Sin estos elementos no está permitido manipular la paletera. Revisá tu equipo antes de cada descarga." },
+
+        { kick: "Pasos 4 y 5", h: "Registro y verificación", steps: [
+          "<b>Registro con PDA.</b> Con la lectora de Smart Retail, entrar al menú, elegir recepción y leer todas las unidades por RFID.",
+          "<b>Verificación de cajas.</b> Durante la lectura, controlar que las cajas completas coincidan con el número de caja indicado en los bins desde el centro logístico." ],
+          rule: "La lectura RFID es la fuente de verdad: nada se da por recibido hasta que la PDA lo registró." },
+
+        { kick: "Paso 6", h: "Manejo de sobrantes", sub: "Si durante la lectura aparece una caja sobrante, el circuito es siempre el mismo.",
+          flow: [
+          { e: "01", b: "Detectar", s: "Se identifica la caja sobrante en la lectura RFID." },
+          { e: "02", b: "Reportar", s: "Cargarla en la app de sobrantes y en la planilla compartida con logística." },
+          { e: "03", b: "Esperar", s: "Aguardar la confirmación del área de logística." },
+          { e: "04", b: "Ingresar", s: "Con la confirmación, se ingresa en SAP." } ],
+          rule: "Nunca ingresar un sobrante en SAP sin la confirmación previa de logística." },
+
+        { kick: "Pasos 7 y 8", h: "Cierre e implantación", steps: [
+          "<b>Confirmación de recepción.</b> Terminada la lectura se marca el tilde de \"OK\" y se inicia la distribución de pallets por universo.",
+          "<b>Implantación en el salón.</b> Se unifican los bins de cada universo en la zona delimitada del DOCA y se implantan de manera ágil y dinámica." ],
+          rule: "Mercadería recibida es mercadería disponible: el objetivo es que llegue al salón el mismo día." },
+
+        { kick: "Para todos los turnos", h: "Buenas prácticas", cards: [
+          { ic: "🦺", b: "Seguridad primero", s: "Nunca manipular cargas sin el equipo de protección personal." },
+          { ic: "🧹", b: "Orden y limpieza", s: "Mantener el área de recepción despejada para evitar accidentes." },
+          { ic: "📣", b: "Comunicación clara", s: "Informar de inmediato cualquier incidencia al responsable de turno." },
+          { ic: "✅", b: "Registro preciso", s: "Verificar que PDA y SAP coincidan con la mercadería recibida." },
+          { ic: "🤝", b: "Trabajo en equipo", s: "Coordinar la distribución de pallets y bins para agilizar la implantación." } ] }
+      ]
+    },
+
+    cambios: {
+      icono: "🔧", nombre: "Cambios y averías",
+      slides: [
+        { hero: 1, kick: "Manual de procedimientos", h: "Cambios y reclamos de averías",
+          sub: "Políticas de devolución, garantías y gestión paso a paso en WIND y CUBE",
+          chips: ["Políticas", "Devoluciones", "Averías", "Sistemas"] },
+
+        { kick: "Marco general", h: "Objetivo y alcance", cards: [
+          { ic: "🎯", b: "Objetivo", s: "Gestionar devoluciones y reclamos de averías con transparencia, rapidez y satisfacción del cliente." },
+          { ic: "🏬", b: "Alcance", s: "Todos los productos vendidos en tienda física: indumentaria, calzado, accesorios y equipamiento." } ] },
+
+        { kick: "Políticas generales", h: "Plazos de devolución", stats: [
+          { e: "General", n: "30 días", s: "Con ticket o factura de compra." },
+          { e: "Club Decathlon", n: "60 días", s: "Si el cliente es miembro del Club." } ],
+          sub: "Ambos plazos se cuentan a partir de la fecha de compra.",
+          rule: "Sin ticket o factura no se puede iniciar la devolución: es el comprobante que valida la compra y el plazo." },
+
+        { kick: "Políticas generales", h: "Condiciones y excepciones", cards: [
+          { ic: "🏷️", b: "Estado del producto", s: "En perfecto estado, sin uso, con etiquetas y empaques originales." },
+          { ic: "⛑️", b: "Protección · por seguridad", s: "Cascos, rodilleras y pecheras no se cambian ni se devuelven. Fuera de la tienda no hay forma de saber si recibieron un golpe, y un golpe que no se ve puede dejarlos sin capacidad de protección." },
+          { ic: "🩱", b: "Trajes de baño", s: "Sí se aceptan para cambio, siempre que estén sin uso, con etiquetas y empaque original." },
+          { ic: "🛡️", b: "Alcance de la garantía", s: "Solo defectos de fabricación. No cubre daños por uso indebido ni desgaste normal." } ],
+          rule: "En elementos de protección la única excepción es el defecto de fábrica." },
+
+        { kick: "Devoluciones", h: "El circuito en 4 pasos", flow: [
+          { e: "01", b: "Recepción", s: "El cliente presenta el producto y el comprobante." },
+          { e: "02", b: "Verificación", s: "Se revisa el estado y se confirma el plazo." },
+          { e: "03", b: "Opciones", s: "Se le presentan las alternativas disponibles." },
+          { e: "04", b: "Registro", s: "Se documenta la operación en los sistemas." } ] },
+
+        { kick: "Devoluciones", h: "Las tres opciones para el cliente", cards: [
+          { ic: "🔁", b: "Cambio por otro producto", s: "Alternativa directa en el momento." },
+          { ic: "🎁", b: "Giftcard", s: "Saldo a favor para una próxima compra." },
+          { ic: "💳", b: "Reembolso al método de pago original", s: "Solo si el producto presenta falla." } ] },
+
+        { kick: "Paso a paso · WIND", h: "Cambio común", steps: [
+          "<b>Devolución.</b> Hacer clic en la pantalla en la opción Devolución.",
+          "<b>Acceso colaborador.</b> Elegir Acceso colaborador y escanear la identificación personal del polivalente.",
+          "<b>Escaneo del ticket.</b> En el home de transacciones/cambios, escanear el QR del ticket del cliente.",
+          "<b>Selección del artículo.</b> Todo el cambio o por artículo: Detalles → Acceso a la devolución → elegir el artículo → Devolución.",
+          "<b>Nota de crédito.</b> Elegir E-Gift, giftcard física o devolución al mismo método de pago. Sale el comprobante para la nueva compra." ],
+          rule: "El acceso siempre se valida con la identificación personal del polivalente." },
+
+        { kick: "Averías", h: "Las tres etapas del reclamo", flow: [
+          { e: "01", b: "Solicitud del cliente", s: "Presenta el producto defectuoso y el comprobante." },
+          { e: "02", b: "Evaluación técnica", s: "Se define si es falla de uso o de fabricación." },
+          { e: "03", b: "Resolución en sistemas", s: "Se registra en WIND y se detalla en CUBE." } ],
+          rule: "Dos sistemas, un mismo circuito: la avería se carga en WIND, se detalla en CUBE y vuelve a WIND con un QR." },
+
+        { kick: "Paso a paso · WIND", h: "Registro de la avería", steps: [
+          "<b>Acceso a la devolución.</b> Clic en la opción Devolución.",
+          "<b>Ingreso como colaborador.</b> Acceso colaborador y escaneo de la identificación del polivalente.",
+          "<b>Registro de transacción / cambio.</b> Escanear el QR o ingresar el número de serie de cambio del ticket.",
+          "<b>Selección de artículos.</b> Cambio completo o por artículo: Detalles → Acceso a la devolución.",
+          "<b>Marcar el artículo defectuoso.</b> Seleccionar el producto que el cliente quiere cambiar.",
+          "<b>Motivo de la devolución.</b> En el desplegable elegir <b>Defectuoso</b>." ],
+          rule: "Los motivos son Defectuoso, Gesto comercial y Retorno al stock. En una avería siempre corresponde Defectuoso." },
+
+        { kick: "Paso a paso · CUBE", h: "Detalle de la avería", steps: [
+          "<b>Ingresar al sistema CUBE.</b>",
+          "<b>Buscar el SKU.</b> En el dashboard, seleccionar las flechas hacia abajo que indican retorno al sistema.",
+          "<b>Cantidad.</b> Elegir la cantidad correspondiente al SKU y validar.",
+          "<b>Fecha.</b> Seleccionar la fecha de compra inicial y validar nuevamente.",
+          "<b>Marcar como defectuoso.</b> Clic en el SKU (aparece como Pendiente) y seleccionar Defectuoso.",
+          "<b>Completar el desplegable:</b> localización, sublocalización o parte principal, y tipo de defecto.",
+          "<b>Validar la información.</b>" ],
+          rule: "CUBE genera un QR que hay que escanear en WIND para validar la entrada. Ninguna avería queda cerrada si no pasó por los dos sistemas." },
+
+        { kick: "Roles", h: "Responsabilidades", cards: [
+          { ic: "🛒", b: "Personal de ventas", s: "Recepción del cliente y primera evaluación del producto." },
+          { ic: "🧭", b: "Encargado de tienda", s: "Validación final de devoluciones y garantías." },
+          { ic: "🧾", b: "Administración", s: "Registro contable y gestión de reembolsos." } ],
+          rule: "Toda resolución se informa de forma clara y respetuosa, y se entrega comprobante escrito de la gestión." }
+      ]
+    },
+
+    inventarios: {
+      icono: "📋", nombre: "Inventarios cíclicos",
+      slides: [
+        { hero: 1, kick: "Manual de procedimientos", h: "Inventarios cíclicos",
+          sub: "Conteo físico, conciliación y ajuste en SAP · cuatro fases, un universo por semana",
+          chips: ["Preparación", "Conteo", "Conciliación", "Ajuste"] },
+
+        { kick: "Marco general", h: "Objetivo y alcance", cards: [
+          { ic: "🎯", b: "Objetivo", s: "Verificar físicamente las existencias y compararlas con el sistema, para tener información confiable de gestión y control." },
+          { ic: "🏬", b: "Alcance", s: "Todas las tiendas físicas, todos los productos registrados e inventarios cíclicos, mensuales y extraordinarios." } ],
+          rule: "Limitación actual: la carga en SAP no está integrada y los procesos son manuales, lo que genera desalineación entre sistemas." },
+
+        { kick: "Roles", h: "Quién hace qué", cards: [
+          { ic: "🔢", b: "Responsable de universo", s: "Realiza el conteo físico." },
+          { ic: "✔️", b: "OSET", s: "Valida resultados y discrepancias." },
+          { ic: "💻", b: "Área de sistemas", s: "Provee el inventario teórico y el soporte técnico." },
+          { ic: "🛠️", b: "Equipo STI + tienda", s: "Apoyo en los ajustes de SAP." },
+          { ic: "🧩", b: "Especialista SAP", s: "Soporte total en tienda durante todo el horario del cíclico." } ] },
+
+        { kick: "Calendario", h: "Cuándo se hace", cards: [
+          { ic: "🗓️", b: "Cíclico · semanal", s: "Un universo por semana, según la planilla anual." },
+          { ic: "🚨", b: "Extraordinario", s: "Ante sospechas de pérdida, auditorías o cambios operativos." } ],
+          rule: "El universo, la fecha y los responsables de cada cíclico salen del calendario anual: no se improvisan en la semana." },
+
+        { kick: "Con qué se trabaja", h: "Recursos", cards: [
+          { ic: "📱", b: "Stock and Business", s: "La app para inventariar. Evita los pasos manuales entre My Business y Smart Retail e impacta directo en Cube." },
+          { ic: "📄", b: "Formatos de control", s: "Fecha, universo, unidades en sistema, unidades reales, diferencia, resultado y justificación." },
+          { ic: "📶", b: "Herramientas de conteo", s: "PDA lectora y planillas." } ],
+          rule: "Todo lo que se cuenta con Stock and Business impacta en Cube: por eso hay que validar e impactar los movimientos." },
+
+        { kick: "Vista general", h: "El circuito completo", flow: [
+          { e: "A", b: "Preparación", s: "Definir universo, fechas y responsables." },
+          { e: "B", b: "Conteo", s: "Registrar las unidades reales en tienda." },
+          { e: "C", b: "Conciliación", s: "Analizar diferencias y documentar causas." },
+          { e: "D", b: "Ajuste", s: "Validar, ajustar en SAP y reportar." } ] },
+
+        { kick: "Fase A", h: "Preparación y corte de inventario", steps: [
+          "<b>Descargar el stock de SAP.</b> Punto de partida de la planificación del universo.",
+          "<b>Foto de stock en My Business.</b> Stock Reporting → Foto de Stock, con la tienda cerrada o antes de abrir.",
+          "<b>Filtrar.</b> Por \"Stock disponible para la venta\" y fecha actual: es el stock teórico de referencia.",
+          "<b>Validar contra SAP.</b> Comparar el .xlsm de My Business con el reporte de SAP. Si no coinciden, se resuelve antes de contar.",
+          "<b>Preparar Smart Retail.</b> Cargar la foto de stock total para crear el evento y seleccionar el universo a auditar." ],
+          rule: "Sin un corte limpio no hay inventario válido: la foto de stock es la referencia teórica." },
+
+        { kick: "Fase B", h: "Ejecución: el conteo físico", steps: [
+          "<b>Barrido de salón y depósito.</b> Que no quede nada sin contar: en tránsito, en cajas de seguridad o en devoluciones.",
+          "<b>Escaneo con la PDA.</b> Con Stock and Business, código por código. Si un artículo no toma RFID, se agrega manualmente.",
+          "<b>Validar e impactar.</b> Se impactan los movimientos en la app para que la información suba al Cube." ],
+          rule: "Lo que no se escanea aparece como faltante: el barrido tiene que ser completo antes de cerrar el conteo." },
+
+        { kick: "Fase C", h: "Análisis y conciliación", sub: "Se genera el reporte de movimientos post-conteo y cada diferencia se clasifica en uno de estos tres tipos.",
+          cards: [
+          { ic: "📍", b: "Error operativo", s: "Producto mal ubicado o no escaneado durante el conteo." },
+          { ic: "⚙️", b: "Error de sistema", s: "Venta no procesada o remito duplicado." },
+          { ic: "❗", b: "Pérdida o faltante", s: "No hay justificación operativa que explique la diferencia." } ],
+          rule: "Toda discrepancia se documenta con su causa: sin justificación no se puede validar el ajuste." },
+
+        { kick: "Fase D", h: "Ajuste y cierre", steps: [
+          "<b>Validación.</b> OSET / DT revisan y validan el reporte de faltantes y sobrantes.",
+          "<b>Ajuste en SAP.</b> El especialista recibe el reporte validado y realiza el ajuste.",
+          "<b>Sistemas alineados.</b> El stock del sistema queda alineado con la realidad física.",
+          "<b>Reporte final.</b> Se genera el informe para dirección y auditoría." ],
+          rule: "El ajuste en SAP lo hace el especialista, con el reporte ya validado. Nadie ajusta sobre una diferencia sin validar." },
+
+        { kick: "Seguimiento", h: "Indicadores de control", cards: [
+          { ic: "📉", b: "% de diferencias detectadas", s: "Cuánto se desvía el conteo del stock teórico." },
+          { ic: "⏱️", b: "Tiempo promedio de ejecución", s: "Cuánto tarda el inventario de punta a punta." },
+          { ic: "🔧", b: "Número de ajustes", s: "Cuántas correcciones hubo que cargar en SAP." },
+          { ic: "📅", b: "Cumplimiento de fechas", s: "Qué tan alineados vamos con la planilla anual." } ],
+          rule: "Ante cualquier diferencia sin explicación, avisar a OSET antes de cerrar el conteo." }
+      ]
+    }
+  };
+
+  const claves = Object.keys(MP);
+  let manual = claves[0];
+
+  const $ = id => document.getElementById(id);
+  const tabs = $("mp-tabs"), cuerpo = $("mp-cuerpo");
+
+  tabs.innerHTML = claves.map(k =>
+    `<button data-k="${k}"><span>${MP[k].icono}</span> ${MP[k].nombre}</button>`).join("");
+
+  function bloque(s, k, total) {
+    let c = "";
+    if (s.chips) c += `<div class="mp-chips">${s.chips.map(x => `<span class="mp-chip">${x}</span>`).join("")}</div>`;
+    if (s.stats) c += `<div class="mp-stats">${s.stats.map(t =>
+      `<div class="mp-stat"><em>${t.e}</em><strong>${t.n}</strong><span>${t.s}</span></div>`).join("")}</div>`;
+    if (s.cards) c += `<div class="mp-cards">${s.cards.map(x =>
+      `<div class="mp-card"><span class="mp-ic">${x.ic}</span><b>${x.b}</b><span>${x.s}</span></div>`).join("")}</div>`;
+    if (s.flow) c += `<div class="mp-flow">${s.flow.map(f =>
+      `<div class="mp-fl"><em>${f.e}</em><b>${f.b}</b><span>${f.s}</span></div>`).join("")}</div>`;
+    if (s.steps) c += `<ol class="mp-steps">${s.steps.map(p => `<li>${p}</li>`).join("")}</ol>`;
+    if (s.rule) c += `<div class="mp-rule">${s.rule}</div>`;
+
+    return `<section class="mp-sec${s.hero ? " mp-hero" : ""}" id="mp-s${k}">` +
+      (s.hero ? `<img class="mp-hero-logo" alt="Decathlon" src="data:image/png;base64,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">` : "") +
+      `<span class="mp-num">${k + 1} / ${total}</span>` +
+      `<p class="mp-kick">${s.kick}</p><h3 class="mp-h">${s.h}</h3>` +
+      (s.sub ? `<p class="mp-sub">${s.sub}</p>` : "") + c + `</section>`;
+  }
+
+  function render() {
+    const m = MP[manual], n = m.slides.length;
+    cuerpo.innerHTML = m.slides.map((s, k) => bloque(s, k, n)).join("");
+    $("mp-fin-txt").textContent =
+      `Fin del manual · ${m.nombre} · ${n} secciones`;
+    [...tabs.children].forEach(b => b.classList.toggle("on", b.dataset.k === manual));
+  }
+
+  tabs.addEventListener("click", e => {
+    const b = e.target.closest("button");
+    if (!b) return;
+    manual = b.dataset.k;
+    render();
+    $("mp-wrap").scrollIntoView({ behavior: "smooth", block: "start" });
+  });
+
+  render();
+})();
+</script>
+
+
+  <p class="cierre">Documento de uso interno · Tienda · Decathlon</p>
+</div>
+</body>
+</html>
